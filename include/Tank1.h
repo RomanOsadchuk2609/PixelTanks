@@ -11,7 +11,7 @@ class Tank1: public Tank
     public:
         Tank1();
         virtual ~Tank1();
-        void Move(float t, string Map[11]);
+        void Move(float t, string Map[11], Tank tank2);
 
     protected:
 

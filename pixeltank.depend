@@ -9,7 +9,7 @@
 
 1494177935 d:\Лабораторні\pixeltank\include\cell.h
 
-1499285045 source:d:\Лабораторні\pixeltank\main.cpp
+1499334061 source:d:\Лабораторні\pixeltank\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<stdlib.h>
@@ -421,7 +421,7 @@
 	<Windows.h>
 	<time.h>
 
-1499284720 source:d:\Лабораторні\pixeltank\src\tank.cpp
+1499333870 source:d:\Лабораторні\pixeltank\src\tank.cpp
 	"Tank.h"
 	<SFML/Graphics.hpp>
 	<Windows.h>
@@ -429,7 +429,7 @@
 	<Windows.h>
 	"Shot.h"
 
-1498680769 d:\Лабораторні\pixeltank\include\tank.h
+1499332285 d:\Лабораторні\pixeltank\include\tank.h
 	<SFML/Graphics.hpp>
 	<Windows.h>
 	<ctime>
@@ -449,14 +449,14 @@
 	<SFML/Graphics.hpp>
 	<Windows.h>
 
-1498680769 d:\Лабораторні\pixeltank\include\tank1.h
+1499332285 d:\Лабораторні\pixeltank\include\tank1.h
 	"Tank.h"
 	<SFML/Graphics.hpp>
 	<Windows.h>
 	<ctime>
 	<Windows.h>
 
-1498680769 d:\Лабораторні\pixeltank\include\tank2.h
+1499332285 d:\Лабораторні\pixeltank\include\tank2.h
 	"Tank.h"
 	<SFML/Graphics.hpp>
 	<Windows.h>
@@ -464,7 +464,7 @@
 	<Windows.h>
 	"Shot.h"
 
-1498680769 source:d:\Лабораторні\pixeltank\src\tank2.cpp
+1499332285 source:d:\Лабораторні\pixeltank\src\tank2.cpp
 	"Tank2.h"
 	"Tank.h"
 	<SFML/Graphics.hpp>
@@ -473,7 +473,7 @@
 	<Windows.h>
 	"Shot.h"
 
-1498680769 source:d:\Лабораторні\pixeltank\src\tank1.cpp
+1499332285 source:d:\Лабораторні\pixeltank\src\tank1.cpp
 	"Tank.h"
 	"Tank1.h"
 	<SFML/Graphics.hpp>

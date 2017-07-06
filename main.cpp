@@ -40,8 +40,8 @@ int main()
         "Z        ZZ        Z",
         "Z        ZZ        Z",
         "Z        ZZ        Z",
-        "Z   K    KK    K   Z",
-        "Z        KK        Z",
+        "Z                  Z",
+        "Z                  Z",
         "Z        KK        Z",
         "ZZZZZZZZZZZZZZZZZZZZ"
     };*/
@@ -110,8 +110,8 @@ int main()
             if (event.type == Event::Closed)
                 window.close();
         }
-        tank1.Move(t, Map);
-        tank2.Move(t, Map);
+        tank1.Move(t, Map, tank2);
+        tank2.Move(t, Map, tank1);
 
         //if(Mouse::isButtonPressed(Mouse::Left))
         if(Keyboard::isKeyPressed(Keyboard::P))

@@ -77,7 +77,7 @@ int Tank::getPosition()
     return tankPosition;
 }
 
-void Tank::MoveUP(float t,string Map[11])
+void Tank::MoveUP(float t,string Map[11], Tank tank2)
 {
     bool f=true;
     for(int i=0; i<11; i++)
@@ -96,6 +96,11 @@ void Tank::MoveUP(float t,string Map[11])
             }
         }
         if(!f) break;
+    }
+    if(y<tank2.y+50-2 && y>tank2.y+2 && x>tank2.x-50+2 && x<tank2.x+50-2)
+    {
+        f=false;
+        y=tank2.y+51;
     }
     if(!Damaged&&f)
     {
@@ -118,7 +123,7 @@ void Tank::MoveUP(float t,string Map[11])
     else return;
 }
 
-void Tank::MoveDown(float t,string Map[11])
+void Tank::MoveDown(float t,string Map[11], Tank tank2)
 {
     bool f=true;
     for(int i=0; i<11; i++)
@@ -137,6 +142,11 @@ void Tank::MoveDown(float t,string Map[11])
             }
         }
         if(!f) break;
+    }
+    if(y<(tank2.y-2) && y>(tank2.y-50+2) && x>tank2.x-50+2 && x<(tank2.x+50-2) )
+    {
+        f=false;
+        y=tank2.y-51;
     }
     if(!Damaged && f)
     {
@@ -159,7 +169,7 @@ void Tank::MoveDown(float t,string Map[11])
 
 }
 
-void Tank::MoveRight(float t,string Map[11])
+void Tank::MoveRight(float t,string Map[11], Tank tank2)
 {
     bool f=true;
     for(int i=0; i<11; i++)
@@ -178,6 +188,11 @@ void Tank::MoveRight(float t,string Map[11])
             }
         }
         if(!f) break;
+    }
+    if(y<tank2.y+50-2 && y>tank2.y-50+2 && x>tank2.x-50+2 && x<tank2.x-2)
+    {
+        f=false;
+        x=tank2.x-51;
     }
     if(!Damaged && f)
     {
@@ -200,7 +215,7 @@ void Tank::MoveRight(float t,string Map[11])
     else return;
 }
 
-void Tank::MoveLeft(float t,string Map[11])
+void Tank::MoveLeft(float t,string Map[11], Tank tank2)
 {
     bool f=true;
     for(int i=0; i<11; i++)
@@ -219,6 +234,11 @@ void Tank::MoveLeft(float t,string Map[11])
             }
         }
         if(!f) break;
+    }
+    if(y<tank2.y+50-2 && y>tank2.y-50+2 && x>tank2.x+2 && x<tank2.x+50-2)
+    {
+        f=false;
+        x=tank2.x+51;
     }
     if(!Damaged && f)
     {
@@ -242,23 +262,23 @@ void Tank::MoveLeft(float t,string Map[11])
     else return;
 }
 
-void Tank::Move(float t,string Map[11])
+void Tank::Move(float t,string Map[11], Tank tank2)
 {
     if(Keyboard::isKeyPressed(Keyboard::Right)||Keyboard::isKeyPressed(Keyboard::D))
     {
-        MoveRight(t,Map);
+        MoveRight(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::Left)||Keyboard::isKeyPressed(Keyboard::A))
     {
-        MoveLeft(t,Map);
+        MoveLeft(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::Up)||Keyboard::isKeyPressed(Keyboard::W))
     {
-        MoveUP(t,Map);
+        MoveUP(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::Down)||Keyboard::isKeyPressed(Keyboard::S))
     {
-        MoveDown(t,Map);
+        MoveDown(t,Map,tank2);
     }
 }
 

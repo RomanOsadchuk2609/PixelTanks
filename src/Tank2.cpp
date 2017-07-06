@@ -15,22 +15,22 @@ Tank2::~Tank2()
 {
     //dtor
 }
-void Tank2::Move(float t, string Map[11])
+void Tank2::Move(float t, string Map[11], Tank tank2)
 {
     if(Keyboard::isKeyPressed(Keyboard::D))
     {
-        MoveRight(t,Map);
+        MoveRight(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::A))
     {
-        MoveLeft(t,Map);
+        MoveLeft(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::W))
     {
-        MoveUP(t,Map);
+        MoveUP(t,Map,tank2);
     }
     else if(Keyboard::isKeyPressed(Keyboard::S))
     {
-        MoveDown(t,Map);
+        MoveDown(t,Map,tank2);
     }
 }

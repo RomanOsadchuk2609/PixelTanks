@@ -2,34 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="786" topLine="18" />
-		</Cursor>
-	</File>
 	<File name="src\Shot.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="969" topLine="164" />
 		</Cursor>
 	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="333" topLine="17" />
+		</Cursor>
+	</File>
 	<File name="src\Tank.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3529" topLine="156" />
-		</Cursor>
-	</File>
-	<File name="src\Tank1.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="607" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="src\Tank2.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="284" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="include\Tank1.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="275" topLine="0" />
+			<Cursor1 position="2943" topLine="106" />
 		</Cursor>
 	</File>
 	<File name="include\Shot.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -37,14 +22,29 @@
 			<Cursor1 position="599" topLine="7" />
 		</Cursor>
 	</File>
-	<File name="include\Tank.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="375" topLine="9" />
-		</Cursor>
-	</File>
 	<File name="include\Tank2.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="292" topLine="0" />
+			<Cursor1 position="304" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Tank1.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="180" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="include\Tank.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="630" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="include\Tank1.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="287" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Tank2.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="296" topLine="8" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

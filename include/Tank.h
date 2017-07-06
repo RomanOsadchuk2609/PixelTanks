@@ -14,11 +14,11 @@ class Tank
         double getSpeed() const;
         void setSpeed(int speed);
         void setPicture(string file);
-        virtual void Move(float t, string Map[11]);
-        void MoveUP(float t, string Map[11]);
-        void MoveDown(float t, string Map[11]);
-        void MoveLeft(float t, string Map[11]);
-        void MoveRight(float t, string Map[11]);
+        virtual void Move(float t, string Map[11], Tank tank2);
+        void MoveUP(float t, string Map[11], Tank tank2);
+        void MoveDown(float t, string Map[11], Tank tank2);
+        void MoveLeft(float t, string Map[11], Tank tank2);
+        void MoveRight(float t, string Map[11], Tank tank2);
         Sprite getSprite();
         void shot();
         double getX() const;
