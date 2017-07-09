@@ -87,7 +87,7 @@ void Tank::MoveUP(float t,string Map[11], Tank tank2)
             if(Map[i][j]=='K'||Map[i][j]=='Z')
             {
                 int a=j*50, b=i*50+50;
-               if(y<b+50-2 && y>b+2 && x>(a-50+2) && x<(a+50-2))
+               if(y<b+50-2 && y>b+2 && x>(a-40+2) && x<(a+50-2))
                {
                    y=b+51;
                    f=false;
@@ -97,14 +97,14 @@ void Tank::MoveUP(float t,string Map[11], Tank tank2)
         }
         if(!f) break;
     }
-    if(y<tank2.y+50-2 && y>tank2.y+2 && x>tank2.x-50+2 && x<tank2.x+50-2)
+    if(y<tank2.y+40-2 && y>tank2.y+2 && x>tank2.x-40+2 && x<tank2.x+40-2)
     {
         f=false;
-        y=tank2.y+51;
+        y=tank2.y+41;
     }
     if(!Damaged&&f)
     {
-        if(y>100)
+        if(y>50)
         {
             if(tankPosition==1)
             {
@@ -133,9 +133,9 @@ void Tank::MoveDown(float t,string Map[11], Tank tank2)
             if(Map[i][j]=='K'||Map[i][j]=='Z')
             {
                 int a=j*50, b=i*50+50;
-                if(y<b-2 && y>b-50+2 && x>(a-50+2) && x<(a+50-2))
+                if(y<b-2 && y>b-40+2 && x>(a-40+2) && x<(a+50-2))
                 {
-                    y=b-51;
+                    y=b-41;
                     f=false;
                     break;
                 }
@@ -143,14 +143,14 @@ void Tank::MoveDown(float t,string Map[11], Tank tank2)
         }
         if(!f) break;
     }
-    if(y<(tank2.y-2) && y>(tank2.y-50+2) && x>tank2.x-50+2 && x<(tank2.x+50-2) )
+    if(y<(tank2.y-2) && y>(tank2.y-40+2) && x>tank2.x-40+2 && x<(tank2.x+40-2) )
     {
         f=false;
-        y=tank2.y-51;
+        y=tank2.y-41;
     }
     if(!Damaged && f)
     {
-        if(y<500)
+        if(y<560)
         {
             if(tankPosition==3)
             {
@@ -179,9 +179,9 @@ void Tank::MoveRight(float t,string Map[11], Tank tank2)
             if(Map[i][j]=='K'||Map[i][j]=='Z')
             {
                 int a=j*50, b=i*50+50;
-               if(y<b+50-2 && y>b-50+2 && x>(a-50+2) && x<a-2)
+               if(y<b+50-2 && y>b-40+2 && x>(a-40+2) && x<a-2)
                {
-                   x=a-51;
+                   x=a-41;
                    f=false;
                    break;
                }
@@ -189,14 +189,14 @@ void Tank::MoveRight(float t,string Map[11], Tank tank2)
         }
         if(!f) break;
     }
-    if(y<tank2.y+50-2 && y>tank2.y-50+2 && x>tank2.x-50+2 && x<tank2.x-2)
+    if(y<tank2.y+40-2 && y>tank2.y-40+2 && x>tank2.x-40+2 && x<tank2.x-2)
     {
         f=false;
-        x=tank2.x-51;
+        x=tank2.x-41;
     }
     if(!Damaged && f)
     {
-        if(x<900)
+        if(x<960)
         {
             if(tankPosition==2)
             {
@@ -225,7 +225,7 @@ void Tank::MoveLeft(float t,string Map[11], Tank tank2)
             if(Map[i][j]=='K'||Map[i][j]=='Z')
             {
                 int a=j*50, b=i*50+50;
-               if(y<b+50-2 && y>b-50+2 && x>a+2 && x<(a+50-2))
+               if(y<b+50-2 && y>b-40+2 && x>a+2 && x<(a+50-2))
                {
                    x=a+51;
                    f=false;
@@ -235,14 +235,14 @@ void Tank::MoveLeft(float t,string Map[11], Tank tank2)
         }
         if(!f) break;
     }
-    if(y<tank2.y+50-2 && y>tank2.y-50+2 && x>tank2.x+2 && x<tank2.x+50-2)
+    if(y<tank2.y+40-2 && y>tank2.y-40+2 && x>tank2.x+2 && x<tank2.x+40-2)
     {
         f=false;
-        x=tank2.x+51;
+        x=tank2.x+41;
     }
     if(!Damaged && f)
     {
-        if(x>50)
+        if(x>0)
         {
 
             if(tankPosition==4)

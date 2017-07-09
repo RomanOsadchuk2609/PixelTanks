@@ -68,12 +68,16 @@
 			<Add library="gdi32" />
 			<Add directory="D:/SFML/SFML-2.4.2/lib" />
 		</Linker>
+		<Unit filename="include/Game.h" />
 		<Unit filename="include/Shot.h" />
+		<Unit filename="include/TButton.h" />
 		<Unit filename="include/Tank.h" />
 		<Unit filename="include/Tank1.h" />
 		<Unit filename="include/Tank2.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Shot.cpp" />
+		<Unit filename="src/TButton.cpp" />
 		<Unit filename="src/Tank.cpp" />
 		<Unit filename="src/Tank1.cpp" />
 		<Unit filename="src/Tank2.cpp" />

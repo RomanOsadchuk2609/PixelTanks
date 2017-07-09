@@ -21,23 +21,23 @@ Shot::Shot(double x, double y, int course)
 
     if(course == 1)
     {
-        this->x=x+20;
+        this->x=x+15;
         this->y=y;
     }
     if(course == 2)
     {
-        this->x=x+50;
-        this->y=y+20;
+        this->x=x+40;
+        this->y=y+15;
     }
     if(course == 3)
     {
-        this->x=x+20;
-        this->y=y+50;
+        this->x=x+15;
+        this->y=y+40;
     }
     if(course ==4)
     {
         this->x=x;
-        this->y=y+20;
+        this->y=y+15;
     }
     texture.loadFromFile("res/snariad.png");
     sprite.setTexture(texture);
@@ -138,7 +138,7 @@ void Shot::setCanDoDamage(bool value)
 
 bool Shot::isOnTank(Tank tank)
 {
-    if(y>=(tank.getY()) && y<=(tank.getY()+50) && x>=tank.getX() && x<=(tank.getX()+50) && isCanDoDamage())
+    if(y+5>=(tank.getY()) && y+5<=(tank.getY()+50) && x+5>=tank.getX() && x+5<=(tank.getX()+50) && isCanDoDamage())
     {
         speed = 0;
         canMove=false;
@@ -165,7 +165,7 @@ void Shot::isOnBlock(string Map[11])
             {
                 if(Map[i][j]=='K')
                 {
-                    if(x>j*50 && x<(j*50+50) && y >(i*50+50) && y<(i*50+50+50) && isCanDoDamage())
+                    if(x+5>j*50 && x+5<(j*50+50) && y +5>(i*50+50) && y+5<(i*50+50+50) && isCanDoDamage())
                     {
                         Map[i][j]=' ';
                         speed = 0;
@@ -177,7 +177,7 @@ void Shot::isOnBlock(string Map[11])
                 }
                 else if(Map[i][j]=='Z')
                 {
-                    if(x>j*50 && x<(j*50+50) && y >(i*50+50) && y<(i*50+50+50) && isCanDoDamage())
+                    if(x+5>j*50 && x+5<(j*50+50) && y+5 >(i*50+50) && y+5<(i*50+50+50) && isCanDoDamage())
                     {
                         speed = 0;
                         canMove=false;

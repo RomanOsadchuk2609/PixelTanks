@@ -9,7 +9,7 @@
 
 1494177935 d:\Лабораторні\pixeltank\include\cell.h
 
-1499334061 source:d:\Лабораторні\pixeltank\main.cpp
+1499614748 source:d:\Лабораторні\pixeltank\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<stdlib.h>
@@ -23,6 +23,7 @@
 	"Tank2.h"
 	"Tank.h"
 	"Shot.h"
+	"TButton.h"
 
 1486739997 d:\sfml\sfml-2.4.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -421,7 +422,7 @@
 	<Windows.h>
 	<time.h>
 
-1499333870 source:d:\Лабораторні\pixeltank\src\tank.cpp
+1499351559 source:d:\Лабораторні\pixeltank\src\tank.cpp
 	"Tank.h"
 	<SFML/Graphics.hpp>
 	<Windows.h>
@@ -441,7 +442,7 @@
 	"Tank1.h"
 	"Tank2.h"
 
-1499282007 source:d:\Лабораторні\pixeltank\src\shot.cpp
+1499594592 source:d:\Лабораторні\pixeltank\src\shot.cpp
 	"Shot.h"
 	"Tank1.h"
 	"Tank2.h"
@@ -480,4 +481,13 @@
 	<Windows.h>
 	<ctime>
 	<Windows.h>
+
+1499608673 d:\Лабораторні\pixeltank\include\tbutton.h
+	<SFML/Graphics.hpp>
+	<string>
+
+1499608705 source:d:\Лабораторні\pixeltank\src\tbutton.cpp
+	"TButton.h"
+	<SFML/Graphics.hpp>
+	<string>
 

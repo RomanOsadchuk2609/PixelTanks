@@ -11,6 +11,8 @@
 #include "Tank2.h"
 #include "Tank.h"
 #include "Shot.h"
+#include "TButton.h"
+#include "Game.h"
 
 using namespace sf;
 using namespace std;
@@ -22,11 +24,11 @@ int main()
         "ZZZZZZZZZZZZZZZZZZZZ",
         "Z KK KZKK  KKZK KK Z",
         "ZZZK K  KZZK  K KZZZ",
-        "ZKKKKKKKKKKKKKKKKKKZ",
-        "Z   K   ZKKZ   K   Z",
+        "ZKKK KKKK  KKKK KKKZ",
+        "Z   K   Z  Z   K   Z",
         "Z   KZKKZZZZKKZK   Z",
-        "Z   K   ZKKZ   K   Z",
-        "ZKKKKKKKKKKKKKKKKKKZ",
+        "Z   K   Z  Z   K   Z",
+        "ZKKK KKKK  KKKK KKKZ",
         "ZZZK K  KZZK  K KZZZ",
         "Z KK KZKK  KKZK KK Z",
         "ZZZZZZZZZZZZZZZZZZZZ"
@@ -36,13 +38,27 @@ int main()
         "ZZZZZZZZZZZZZZZZZZZZ",
         "Z        KK        Z",
         "Z        KK        Z",
-        "Z      K KK K      Z",
-        "Z        ZZ        Z",
-        "Z        ZZ        Z",
-        "Z        ZZ        Z",
-        "Z                  Z",
-        "Z                  Z",
         "Z        KK        Z",
+        "Z        ZZ        Z",
+        "Z   KKKKKZZKKKKK   Z",
+        "Z        ZZ        Z",
+        "Z        KK        Z",
+        "Z        KK        Z",
+        "Z        KK        Z",
+        "ZZZZZZZZZZZZZZZZZZZZ"
+    };*/
+    /*string Map[11]
+    {
+        "ZZZZZZZZZZZZZZZZZZZZ",
+        "Z KK KZKK  KKZK KK Z",
+        "ZZZK K  KZZK  K KZZZ",
+        "ZKZKKKKKKZZKKKKKKZKZ",
+        "Z   Z   Z  Z   Z   Z",
+        "Z   ZZZ  KK  ZZZ   Z",
+        "Z   Z   Z  Z   Z   Z",
+        "ZKZKKKKKKZZKKKKKKZKZ",
+        "ZZZK K  KZZK  K KZZZ",
+        "Z KK KZKK  KKZK KK Z",
         "ZZZZZZZZZZZZZZZZZZZZ"
     };*/
     Texture textureK;
@@ -58,7 +74,8 @@ int main()
     RenderWindow window(VideoMode(1000, 600), "Pixel Tanks");
     Image image;
     image.loadFromFile("res/Tank1.png");
-    window.setIcon(50,50,image.getPixelsPtr());
+    window.setIcon(40,40,image.getPixelsPtr());
+    window.setPosition(Vector2i(200,50));
     Texture infoTexture;
     infoTexture.loadFromFile("res/info.png");
     Sprite infoSprite;
@@ -81,26 +98,22 @@ int main()
     tank2.setX(100);
     tank2.setY(300);
 
-    tank1.setPosition(2);
-    tank2.setPosition(4);
-    vector<Shot> shot;
-    Shot shot1(tank1.getX(),tank1.getY(),tank1.getPosition());
-    Shot shot2(tank2.getX(),tank2.getY(),tank2.getPosition());
+    Shot shot1(tank1.getX(),tank1.getY(),2);
+    Shot shot2(tank2.getX(),tank2.getY(),4);
     shot1.setPicture("res/snariad2.png");
     shot2.setPicture("res/snariad2.png");
+    //Game game;
     Clock clock;
     Clock clock1;
     Clock clock2;
     tank1.setTime(clock1.getElapsedTime().asSeconds());
     tank2.setTime(clock2.getElapsedTime().asSeconds());
     float time;
+    //TButton Map1("res/map1.png");
+
     while (window.isOpen())
     {
-        /*if(clock1.getElapsedTime().asSeconds()>=3)
-        {
-            shot1.setCanDoDamage(true);
-            shot2.setCanDoDamage(true);
-        }*/
+
         float t = clock.getElapsedTime().asMicroseconds();
         clock.restart();
         t/=600;
@@ -192,6 +205,9 @@ int main()
 
         if(shot2.isCanMove())
             shot2.Move(t);
+
+       // Map1.MouseOnButton();
+        ///*********************************************************************************************
         window.clear(Color::Black);
         window.draw(shot1.getSprite());
         window.draw(shot2.getSprite());
@@ -227,6 +243,7 @@ int main()
         window.draw(hp2);
         window.draw(tank1.getSprite());
         window.draw(tank2.getSprite());
+        //window.draw(Map1.getSprite());
 
         window.display();
     }
